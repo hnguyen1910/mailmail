@@ -132,6 +132,7 @@ export default function Authentication() {
                             </FormLabel>
                             <Switch id='email-alerts'
                                 onChange={(e) => setIsQuickAuth(e.target.checked)}
+                                isChecked
                             />
                         </FormControl>
                     </div>
