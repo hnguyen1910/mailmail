@@ -20,7 +20,7 @@ export default function Authentication() {
 
     const router = useRouter();
     const { authorize, isAuthenticated, isLoading } = useContext(UserContext);
-    const [isQuickAuth, setIsQuickAuth] = useState(true);
+    const [isQuickAuth, setIsQuickAuth] = useState(false);
     const toast = useToast()
 
     const { register, handleSubmit } = useForm<IAuthenticationForm>();
@@ -132,7 +132,6 @@ export default function Authentication() {
                             </FormLabel>
                             <Switch id='email-alerts'
                                 onChange={(e) => setIsQuickAuth(e.target.checked)}
-                                data-checked
                             />
                         </FormControl>
                     </div>
