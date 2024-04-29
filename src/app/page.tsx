@@ -37,7 +37,7 @@ export default function Page() {
             <div>
               <Box maxW={660}>
                 <Text fontSize={['md', 'xl']} lineHeight={2}>
-                A mofified version of <Link color={'yellow.100'} href='https://github.com/jessetinell/x2.email'>x2.email</Link> ❤️
+                A mofified version of <Link color={'yellow.100'} href='https://github.com/jessetinell/x2.email'><u>x2.email</u></Link> ❤️
                 </Text>
               </Box>
             </div>
