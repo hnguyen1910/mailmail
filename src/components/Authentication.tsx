@@ -92,24 +92,20 @@ export default function Authentication() {
                             Access token
                         </AlertDialogHeader>
                         <AlertDialogBody>
-                            <OrderedList>
+                            <Text mb={2} fontWeight={'bold'}>
+                                Permissions:
+                            </Text>
+                            <OrderedList spacing={3}>
                                 <ListItem>
-                                    <Text mb={2} fontWeight={'bold'}>
-                                        Permissions:
-                                    </Text>
-                                    <OrderedList spacing={3}>
-                                        <ListItem>
-                                            <Code>Account</Code><ChevronRightIcon /><Code>Email Routing Addresses</Code><ChevronRightIcon /><Code>Read</Code>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Code>Zone</Code><ChevronRightIcon /><Code>Email Routing Rules</Code><ChevronRightIcon /><Code>Edit</Code>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Code>Zone</Code><ChevronRightIcon /><Code>Zone Settings</Code><ChevronRightIcon /><Code>Read</Code>
-                                        </ListItem>
-                                    </OrderedList>
+                                    <Code>Account</Code><ChevronRightIcon /><Code>Email Routing Addresses</Code><ChevronRightIcon /><Code>Read</Code>
                                 </ListItem>
-                            </OrderedList>  
+                                <ListItem>
+                                    <Code>Zone</Code><ChevronRightIcon /><Code>Email Routing Rules</Code><ChevronRightIcon /><Code>Edit</Code>
+                                </ListItem>
+                                <ListItem>
+                                    <Code>Zone</Code><ChevronRightIcon /><Code>Zone Settings</Code><ChevronRightIcon /><Code>Read</Code>
+                                </ListItem>
+                            </OrderedList> 
                             <br />
                             <NextLink href="https://dash.cloudflare.com/profile/api-tokens" target='_blank'>
                                 <Button colorScheme='orange' rightIcon={<ExternalLinkIcon />} size={'md'}>

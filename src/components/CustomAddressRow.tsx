@@ -24,7 +24,7 @@ import {
     Spinner
 } from "@chakra-ui/react";
 import { ArrowForwardIcon, CloseIcon, DeleteIcon, EditIcon } from '@chakra-ui/icons'
-import { generate } from "random-words";
+import { generate } from "randomstring";
 import { UserContext } from '@/context/UserContext';
 import { CloudflareContext } from "@/context/CloudflareContext";
 import { CloudflareEmailRule } from "@/services/cloudflare/cloudflare.types";
@@ -235,7 +235,7 @@ const CustomAddressRow: React.FC<Props> = (props) => {
                                         <Tooltip label='Generate random alias' placement="top" >
                                             <Button
                                                 onClick={() => {
-                                                    const randomAlias = generate({ exactly: 2, join: "." })
+                                                    const randomAlias = generate({ length: 8, readable : true})
                                                     onSubmit({ from: randomAlias, to: destinationAddresses[0], enabled: true, tag: null })
                                                 }}
                                                 colorScheme="gray"
