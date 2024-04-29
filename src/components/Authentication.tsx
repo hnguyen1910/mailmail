@@ -1,9 +1,9 @@
 "use client"
 import React, { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { AlertDialogBody, AlertDialogHeader, Button, Code, Flex, FormControl, FormLabel, HStack, Img, Input, InputGroup, InputRightElement, ListItem, OrderedList, Stack, Switch, Text, UnorderedList, useToast } from '@chakra-ui/react'
+import { AlertDialogBody, AlertDialogHeader, Button, Code, Flex, FormControl, FormLabel, Input, InputGroup, InputRightElement, ListItem, OrderedList, Stack, Switch, Text,  useToast } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { ArrowForwardIcon, ChevronRightIcon, ExternalLinkIcon, LockIcon } from '@chakra-ui/icons';
+import { ArrowForwardIcon, ChevronRightIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import { useForm } from 'react-hook-form';
 import { UserContext } from '@/context/UserContext';
 import InputHelpButton from './InputHelpButton';
@@ -20,7 +20,7 @@ export default function Authentication() {
 
     const router = useRouter();
     const { authorize, isAuthenticated, isLoading } = useContext(UserContext);
-    const [isQuickAuth, setIsQuickAuth] = useState(true);
+    const [isQuickAuth, setIsQuickAuth] = useState(false);
     const toast = useToast()
 
     const { register, handleSubmit } = useForm<IAuthenticationForm>();
@@ -132,7 +132,6 @@ export default function Authentication() {
                             </FormLabel>
                             <Switch id='email-alerts'
                                 onChange={(e) => setIsQuickAuth(e.target.checked)}
-                                isChecked
                             />
                         </FormControl>
                     </div>
