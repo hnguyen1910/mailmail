@@ -23,8 +23,6 @@ export default function Authentication() {
     const [isQuickAuth, setIsQuickAuth] = useState(true);
     const toast = useToast()
 
-    document.getElementById('email-alerts')?.setAttribute('checked','')
-
     const { register, handleSubmit } = useForm<IAuthenticationForm>();
 
     const onSubmit = async (data: IAuthenticationForm) => {
