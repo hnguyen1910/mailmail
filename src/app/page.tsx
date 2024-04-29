@@ -32,7 +32,7 @@ export default function Page() {
             </Box>
 
             <Heading as="h1" fontSize={['3xl', '5xl', '7xl']} fontWeight={900} m={0}>
-              Forked from <Link href='https://github.com/jessetinell/x2.email'>x2.email</Link> ❤️
+              A mofified version of <Link href='https://github.com/jessetinell/x2.email'>x2.email</Link> ❤️
             </Heading>
           </VStack>
         </Flex>
