@@ -92,6 +92,7 @@ export default function Authentication() {
                             Access token
                         </AlertDialogHeader>
                         <AlertDialogBody>
+                            <OrderedList>
                                 <ListItem>
                                     <Text mb={2} fontWeight={'bold'}>
                                         Permissions:
@@ -108,6 +109,7 @@ export default function Authentication() {
                                         </ListItem>
                                     </OrderedList>
                                 </ListItem>
+                            </OrderedList>  
                             <br />
                             <NextLink href="https://dash.cloudflare.com/profile/api-tokens" target='_blank'>
                                 <Button colorScheme='orange' rightIcon={<ExternalLinkIcon />} size={'md'}>
