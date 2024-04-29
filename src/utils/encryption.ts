@@ -1,6 +1,6 @@
 import CryptoJS from 'crypto-js';
 
-const SECRET_KEY = process.env.NEXT_PUBLIC_CLIENT_SECRET_KEY || "not-so-secret";
+const SECRET_KEY = process.env.NEXT_PUBLIC_CLIENT_SECRET_KEY || "a-super-duper-extra-seret-key";
 
 // Encrypt data using the secret key
 const encryptData = (data: any) => {
