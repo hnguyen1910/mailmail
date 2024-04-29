@@ -32,8 +32,15 @@ export default function Page() {
             </Box>
 
             <Heading as="h1" fontSize={['3xl', '5xl', '7xl']} fontWeight={900} m={0}>
-              A mofified version of <Link href='https://github.com/jessetinell/x2.email'>x2.email</Link> ❤️
+              mailmail
             </Heading>
+            <div>
+              <Box maxW={660}>
+                <Text fontSize={['md', 'xl']} lineHeight={2}>
+                A mofified version of <Link color='yellow.100' href='https://github.com/jessetinell/x2.email'>x2.email</Link> ❤️
+                </Text>
+              </Box>
+            </div>
           </VStack>
         </Flex>
       </Container>
