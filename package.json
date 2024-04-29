@@ -12,6 +12,7 @@
     "@chakra-ui/icons": "^2.1.0",
     "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.0",
+    "@cloudflare/next-on-pages": "^1.11.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@types/crypto-js": "^4.1.1",
