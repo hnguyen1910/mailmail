@@ -51,29 +51,6 @@ export default function Authentication() {
 
     }, [isAuthenticated, isLoading])
 
-    const HelpButton = () => {
-        return <InputHelpButton content={<>
-            <AlertDialogHeader fontSize='2xl' fontWeight='bold'>
-                Account ID and Zone ID
-            </AlertDialogHeader>
-            <AlertDialogBody>
-
-                <OrderedList spacing={2}>
-                    <ListItem>
-                        Log in to your Cloudflare dashboard, choose a zone/domain, and copy <Code>Account ID</Code> and <Code>Zone ID</Code> from your domain's overview page.
-                    </ListItem>
-                </OrderedList>
-                <br />
-                <NextLink href="https://dash.cloudflare.com" target='_blank'>
-                    <Button colorScheme='orange' rightIcon={<ExternalLinkIcon />} size={'lg'}>
-                        Open Cloudflare dashboard
-                    </Button>
-                </NextLink>
-            </AlertDialogBody>
-            <Img src="/img/cloudflare-zone-account-ids.png" maxW={'97%'} boxShadow='xs' rounded='md' mt='10' mx='auto' />
-        </>} />
-    }
-
     const QuickAuth = () => (
         <>
             <InputGroup>
@@ -85,12 +62,6 @@ export default function Authentication() {
                         </AlertDialogHeader>
                         <AlertDialogBody>
                             <Text>
-                                "Quick Auth" is useful if you use a password manager and want to log in to x2.email faster.
-                                <br />
-                                <br />
-                                It's a comma-separated string containing Account ID, Zone ID and Access token.
-                                <br />
-                                <br />
                                 <b>Format: </b>
                                 <br /><Code>Account ID, Zone ID, Access token</Code>
                                 <br />
@@ -108,15 +79,9 @@ export default function Authentication() {
         <>
             <InputGroup>
                 <Input placeholder="Account ID" tabIndex={1} defaultValue={process.env.NEXT_PUBLIC_ACCOUNT_ID}  {...register("accountId", { required: true })} />
-                <InputRightElement>
-                    <HelpButton />
-                </InputRightElement>
             </InputGroup>
             <InputGroup>
                 <Input placeholder="Zone ID" tabIndex={2} defaultValue={process.env.NEXT_PUBLIC_ZONE_ID} {...register("zoneId", { required: true })} />
-                <InputRightElement>
-                    <HelpButton />
-                </InputRightElement>
             </InputGroup>
 
             <InputGroup>
@@ -127,49 +92,26 @@ export default function Authentication() {
                             Access token
                         </AlertDialogHeader>
                         <AlertDialogBody>
-                            <OrderedList spacing={2}>
+                            <Text mb={2} fontWeight={'bold'}>
+                                Permissions:
+                            </Text>
+                            <OrderedList spacing={3}>
                                 <ListItem>
-                                    Log in to your Cloudflare dashboard
+                                    <Code>Account</Code><ChevronRightIcon /><Code>Email Routing Addresses</Code><ChevronRightIcon /><Code>Read</Code>
                                 </ListItem>
-                                <ListItem>Create new token (then choose Custom token)</ListItem>
                                 <ListItem>
-                                    <Text mb={2} fontWeight={'bold'}>
-                                        Permissions:
-                                    </Text>
-                                    <OrderedList spacing={3}>
-                                        <ListItem>
-                                            <Code>Account</Code><ChevronRightIcon /><Code>Email Routing Addresses</Code><ChevronRightIcon /><Code>Read</Code>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Code>Zone</Code><ChevronRightIcon /><Code>Email Routing Rules</Code><ChevronRightIcon /><Code>Edit</Code>
-                                        </ListItem>
-                                        <ListItem>
-                                            <Code>Zone</Code><ChevronRightIcon /><Code>Zone Settings</Code><ChevronRightIcon /><Code>Read</Code>
-                                        </ListItem>
-                                    </OrderedList>
+                                    <Code>Zone</Code><ChevronRightIcon /><Code>Email Routing Rules</Code><ChevronRightIcon /><Code>Edit</Code>
                                 </ListItem>
-                            </OrderedList>
+                                <ListItem>
+                                    <Code>Zone</Code><ChevronRightIcon /><Code>Zone Settings</Code><ChevronRightIcon /><Code>Read</Code>
+                                </ListItem>
+                            </OrderedList> 
                             <br />
                             <NextLink href="https://dash.cloudflare.com/profile/api-tokens" target='_blank'>
                                 <Button colorScheme='orange' rightIcon={<ExternalLinkIcon />} size={'md'}>
                                     Open token manager
                                 </Button>
                             </NextLink>
-                            <h3>Permissions explained</h3>
-                            <OrderedList spacing={3}>
-                                <ListItem>
-                                    <Code>Email Routing Addresses | Read</Code><br />Needed to list destination email addresses
-                                </ListItem>
-                                <ListItem>
-                                    <Code>Email Routing Rules | Edit</Code>
-                                    <br />
-                                    Listing, creating, editing and deleting of email rules (aliases)
-                                </ListItem>
-                                <ListItem>
-                                    <Code>Zone Settings | Read</Code>
-                                    <br />Listing of all the zones in your Cloudflare account (or the zone you select in the "Zone Resources" section)
-                                </ListItem>
-                            </OrderedList>
                         </AlertDialogBody>
                     </>} />
                 </InputRightElement>
@@ -205,10 +147,6 @@ export default function Authentication() {
                     colorScheme="orange" size={"lg"}>
                     Connect to Cloudflare
                 </Button>
-                <HStack justifyContent={'center'}>
-                    <LockIcon />
-                    <Text fontSize={'xs'} textAlign={'center'}>The information will be encrypted and stored locally on your browser</Text>
-                </HStack>
             </Stack>
         </>
     )

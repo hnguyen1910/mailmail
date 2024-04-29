@@ -35,38 +35,25 @@ export default function Footer() {
                     <Stack spacing={2}>
                         <Box>
                             <Link as={NextLink} href={"/"}>
-                                <img src="/img/logo.svg" alt="x2.email" width={'130px'} />
+                                <img src="/img/logo.svg" alt="mailmail" width={'130px'} />
                             </Link>
                         </Box>
                         <Text fontSize={'sm'}>
-                            Minimalistic disposable email management
+                            Personal email management
                         </Text>
                     </Stack>
                     <Stack align={'flex-start'}>
-                        <ListHeader>About</ListHeader>
-                        <Link href="/faq" as={NextLink}>
-                            FAQ
-                        </Link>
-                        <Link as={NextLink} href={"https://github.com/jessetinell/x2.email"} isExternal={true}>
+                        <Link as={NextLink} href={"https://github.com/hnguyen1910/mailmail"} isExternal={true}>
                             <HStack spacing={1} >
                                 <GithubIcon />
                                 <Text>Github</Text>
                             </HStack>
                         </Link>
                     </Stack>
-                    <Stack align={'flex-start'}>
-                        <ListHeader>Contact</ListHeader>
-                        <Link as={NextLink} href="mailto:feedback@x2.email">
-                            <span><b>feedback</b>@x2.email</span>
-                        </Link>
-                        <Link as={NextLink} href="mailto:contact@x2.email">
-                            <span><b>contact</b>@x2.email</span>
-                        </Link>
-                    </Stack>
                 </SimpleGrid>
             </Container>
             <Center py={10} color={'gray.600'}>
-                x2.email is not affiliated with Cloudflare
+                mailmail is not affiliated with Cloudflare
             </Center>
         </Box >
     )

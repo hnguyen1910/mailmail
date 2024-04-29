@@ -22,7 +22,7 @@ export default function Header() {
             <Container maxW={'100%'}>
                 <Flex justifyContent="space-between" alignItems={'center'}>
                     <Link as={NextLink} href={isAuthenticated ? "/app" : "/"} width={['6em', '10em']}>
-                        <img src="/img/logo.svg" alt="x2.email" />
+                        <img src="/img/logo.svg" alt="mailmail" />
                     </Link>
 
                     <div>
@@ -30,7 +30,7 @@ export default function Header() {
                             <Link as={NextLink} href={"https://github.com/jessetinell/x2.email"} isExternal={true} hideBelow={'md'}>
                                 <HStack spacing={1} >
                                     <GithubIcon />
-                                    <Text fontWeight={'700'}>Star on Github</Text>
+                                    <Text fontWeight={'700'}>Original Project</Text>
                                 </HStack>
                             </Link>
 
@@ -43,7 +43,7 @@ export default function Header() {
                                     variant='outline'
                                     isLoading={isLoggingOut}
                                 >
-                                    Log out
+                                    Logout
                                 </Button>
                                 :
                                 <Link as={NextLink} href="/login">
@@ -53,7 +53,7 @@ export default function Header() {
                                         iconSpacing={5}
                                         rightIcon={<ArrowForwardIcon />}
                                     >
-                                        Launch
+                                        Login
                                     </Button>
                                 </Link>
                             }
