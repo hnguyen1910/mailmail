@@ -232,17 +232,6 @@ const CustomAddressRow: React.FC<Props> = (props) => {
                                 />
                                     <Text>Saving...</Text></HStack> :
                                     <>
-                                        <Tooltip label='Generate random alias' placement="top" >
-                                            <Button
-                                                onClick={() => {
-                                                    const randomAlias = generate({ length: 8, readable : true})
-                                                    onSubmit({ from: randomAlias, to: destinationAddresses[0], enabled: true, tag: null })
-                                                }}
-                                                colorScheme="gray"
-                                            >
-                                                <DiceIcon />
-                                            </Button>
-                                        </Tooltip>
                                         <Button
                                             onClick={() => onSubmit()}
                                             colorScheme="green"
