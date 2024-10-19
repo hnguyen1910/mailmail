@@ -4,9 +4,9 @@ import encryption from '@/utils/encryption';
 import { CloudflareApiClient } from '@/services/cloudflare';
 import { CloudflareListEmailDestinationsResponse } from '@/services/cloudflare/cloudflare.types';
 
-const LOCAL_STORAGE_ACCOUNT_ID = "x2-email-cloudflare_account_identifier";
-const LOCAL_STORAGE_ZONE_ID = "x2-email-cloudflare_zone_identifier";
-const LOCAL_STORAGE_ACCESS_TOKEN = "x2-email-cloudflare_access_token";
+const LOCAL_STORAGE_ACCOUNT_ID = "mailmail-cloudflare_account_identifier";
+const LOCAL_STORAGE_ZONE_ID = "mailmail-cloudflare_zone_identifier";
+const LOCAL_STORAGE_ACCESS_TOKEN = "mailmail-cloudflare_access_token";
 
 export const UserContext = React.createContext({
 
