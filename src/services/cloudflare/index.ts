@@ -56,7 +56,7 @@ export class CloudflareApiClient {
 
   async getEmailRules(zoneId: string) {
     return await fetcher<CloudflareListEmailRulesResponse>(
-      `${this.baseUrl}/zones/${zoneId}/email/routing/rules`,
+      `${this.baseUrl}/zones/${zoneId}/email/routing/rules?per_page=50`,
       {
         headers: this.getHeaders(),
       },
